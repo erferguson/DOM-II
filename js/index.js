@@ -60,13 +60,10 @@ window.addEventListener('resize', event => {
   });
 
   // -- 7 -- MOUSE-DOWN --
-  const newDestination = document.querySelector('.destination h4')
-  //querySelectorAll >> won't select all .destination h4's
+  const newDestination = document.querySelector('.content-pick')
 
   newDestination.addEventListener('mousedown', (e) => {
       e.target.style.cssText = 'color:orange'
   })
-
-
 
 
