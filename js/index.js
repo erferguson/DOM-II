@@ -56,7 +56,16 @@ window.addEventListener('resize', event => {
 
     changeTitle[1].textContent = 'Live Dangerously!'
     changeTitle[2].textContent = 'Flying on Fire!'
+    changeTitle[3].textContent = 'Hot Stuff!'
   });
+
+  // -- 7 -- MOUSE-DOWN --
+  const newDestination = document.querySelector('.destination h4')
+  //querySelectorAll >> won't select all .destination h4's
+
+  newDestination.addEventListener('mousedown', (e) => {
+      e.target.style.cssText = 'color:orange'
+  })
 
 
 
