@@ -74,3 +74,38 @@ window.addEventListener('resize', event => {
 blankFooter.addEventListener('contextmenu', e => {
     e.preventDefault()
 })
+
+// -- STOP PROPOGATION -- // DO NOT UNDERSTAND THIS 
+const divButton = document.querySelector('.destination')
+
+divButton.addEventListener('click', function(event) {
+console.log ("I'm in the div!")
+event.target.style.cssText = "color:purple";
+})
+
+const buttonInDiv = document.querySelector('.destination .btn')
+
+buttonInDiv.addEventListener('click', (event) => {
+    console.log("I'm in the button!")
+    event.target.style.cssText = 'background:pink'
+    event.stopPropagation();
+}); 
+
+// -- Prevent Default -- // DO NOT UNDERSTAND THIS 
+const navDefault = document.querySelectorAll('.nav-link')
+
+navDefault.forEach((currentvalue) => {
+    currentvalue.addEventListener('click', (event) => {
+        console.log("NAV link is clicked")
+        event.preventDefault();
+    }); 
+});
+
+// const btnDefault = document.querySelectorAll('.btn')
+
+// btnDefault.forEach((currentvalue)=>{
+//     currentvalue.addEventListener('click' , (e) => {
+//         console.log('BTN clicked!!')
+//         e.preventDefault();
+//     });
+// });
